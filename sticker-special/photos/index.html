@@ -12,9 +12,9 @@
 <main id="content" aria-live="polite"></main><button id="more" class="more" hidden>再看一些照片 ↓</button><button id="retry" hidden>照片没载入，点我重试</button>
 <p class="note">点击照片可放大、前后翻看，打开 JPG 可保存到手机。照片保持原画面和比例，未作 AI 重绘；部分早期照片为旧网页留存版。时间按已知经历或整理批次标注，未确认的拍摄日期不作推断。原始文件仍保留在本地，下载的是清晰 JPG 展示版。</p><p class="ending">有些照片拍的是风景，<br>我想收藏的，却是和你一起的日子。</p>
 </div><dialog id="viewer"><div class="top"><h2 id="title"></h2><button id="close" aria-label="关闭照片">×</button></div><img id="photo" alt=""><div class="row"><button id="prev" aria-label="上一张照片">← 上一张</button><span id="position"></span><button id="next" aria-label="下一张照片">下一张 →</button></div><p id="quality"></p><div class="actions"><a id="original" href="" target="_blank" rel="noopener">打开清晰 JPG ↗</a><a id="download" href="" download>下载这张照片 ↓</a></div><p class="tip">微信中可长按图片保存；没有保存入口时，从右上角选择浏览器打开。</p></dialog>
-<script src="photos-data.js?v=20261014-albums"></script>
+<script src="photos-data.js?v=20261024-garden"></script>
 <script>
-const groups={earlier:['早期合照','9月上传 · 拍摄日期未确认'],holiday:['国庆小日子','10月初 · 国庆假期'],garden:['强强的小花园','10月4日整理'],fishing:['钓鱼时光','10月6日—7日']};
+const groups={garden20261024:['小烟花长成大烟花','10月24日整理'],earlier:['早期合照','9月上传 · 拍摄日期未确认'],holiday:['国庆小日子','10月初 · 国庆假期'],garden:['强强的小花园','10月4日整理'],fishing:['钓鱼时光','10月6日—7日']};
 let photos=[],group=null,query='',limit=24,current='',lastFocus;
 const $=s=>document.querySelector(s),viewer=$('#viewer');
 function selected(){return photos.filter(p=>(group==='all'||p.group===group)&&p.name.toLowerCase().includes(query.toLowerCase()))}
